@@ -28,16 +28,17 @@ module Ciclope
       cleanfy_log_name relay_log_file.split('.').first
     end
   
-    def master_log_file
+    # rename becuse there is a key with the same name
+    def _master_log_file
       cleanfy_log_name relay_master_log_file.split('.').first
     end
   
     # sort by log file names, there is no way to do this by host names, may be there is another way to do this more clean
     # TODO: find the right sort
     def <=>(other)
-      if log_file == other.master_log_file
+      if log_file == other._master_log_file
         1
-      elsif other.log_file == master_log_file
+      elsif other.log_file == _master_log_file
         -1
       else
         0
