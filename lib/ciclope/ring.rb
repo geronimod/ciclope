@@ -19,8 +19,8 @@ module Ciclope
 
       connections.each do |c|
         config = Rails.configuration.database_configuration[c.to_s]
-        next if config['adapter'] != 'mysql'
-        @hosts << Host.new(ActiveRecord::Base.mysql_connection(config)) if config
+        next unless config && config['adapter'] != 'mysql'
+        @hosts << Host.new(ActiveRecord::Base.mysql_connection(config))
       end
 
       @hosts = @hosts.sort if options[:sort_hosts] && @hosts.count > 2
