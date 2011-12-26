@@ -29,7 +29,7 @@ Actually there is one class methods to inspect replication data and one to show 
 
 TODO
 ----
-
+Add Testing (what a shame!)
 Extend and refact in order to let work with others frameworks ruby based (Sinatra, Merb), and others ORMs (DataMapper).
 
 Licence
