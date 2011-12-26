@@ -1,7 +1,7 @@
 Ciclope
 =======
 
-Simple utility to show the replication status for MySQL hots. Usefull to inspect sencond behind master status.
+Simple utility to show the replication status for MySQL hots. Usefull to inspect seconds behind master status.
  
 _NOTE: This gem depends on Rails and ActiveRecord as ORM._
 
@@ -19,7 +19,7 @@ The ring will be auto-sorted guessing the master host for each connection, you c
 Use
 ---
 
-Actually there is one class methods to inspect repliaction data and one to show seconds behind master:
+Actually there is one class methods to inspect replication data and one to show seconds behind master:
 
 Ciclope.replication\_status \# => returns a array of hashes with replication data
 Ciclope.replication\_seconds\_behind\_master # => returns a simple string with the host status like:
