@@ -22,7 +22,9 @@ Use
 Actually there is one class methods to inspect replication data and one to show seconds behind master:
 
 > Ciclope.replication\_status \# => returns a array of hashes with replication data
+
 > Ciclope.replication\_seconds\_behind\_master # => returns a simple string with the host status like:
+
 >> host1 ––– 0 seconds –––> host2 ––– 0 seconds –––> host3 ––– 0 seconds –––> host1
 
 TODO
