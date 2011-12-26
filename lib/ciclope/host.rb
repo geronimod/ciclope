@@ -37,9 +37,9 @@ module Ciclope
     # TODO: find the right sort
     def <=>(other)
       if log_file == other._master_log_file
-        1
-      elsif other.log_file == _master_log_file
         -1
+      elsif other.log_file == _master_log_file
+        1
       else
         0
       end
