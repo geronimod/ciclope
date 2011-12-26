@@ -19,6 +19,7 @@ module Ciclope
 
       connections.each do |c|
         config = Rails.configuration.database_configuration[c.to_s]
+        next if config['adapter'] != 'mysql'
         @hosts << Host.new(ActiveRecord::Base.mysql_connection(config)) if config
       end
 
