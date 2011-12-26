@@ -10,20 +10,20 @@ Configuration
 
 Only has to specify a array of two or more Rails database config names:
 
-    Ciclope.connections = [:production, :production\_in\_aws, :production\_in\_other_location]
+    Ciclope.connections = [:production, :production_in_aws, :production_in_other_location]
 
 The ring will be auto-sorted guessing the master host for each connection, you could bypass this feature setting:
 
-    Ciclope.auto\_sort\_connections = false
+    Ciclope.auto_sort_connections = false
 
 Use
 ---
 
 Actually there is one class methods to inspect replication data and one to show seconds behind master:
 
-    Ciclope.replication\_status \# => returns a array of hashes with replication data
+    Ciclope.replication_status \# => returns a array of hashes with replication data
 
-    Ciclope.replication\_seconds\_behind\_master # => returns a simple string with the host status like:
+    Ciclope.replication_seconds_behind_master # => returns a simple string with the host status like:
 
        host1 ––– 0 seconds –––> host2 ––– 0 seconds –––> host3 ––– 0 seconds –––> host1
 
